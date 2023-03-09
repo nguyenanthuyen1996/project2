@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quy doi gia tien</title>
+  <link rel="stylesheet" href="style5.css">
+
+</head>
+<body>
+<h3> Change money</h3>
+  <table>
+    <tr>
+      <th>Amount</th>
+      <th>From Currency</th>
+      <th>To Currency</th>
+    </tr>
+    <tr>
+      <td>
+        <input  id="MoneyValue" type="text">
+      </td>
+      <td>
+        <select name="ChangeMoney" id="Value1">
+          <option name="VND" value="1">VND</option>
+          <option name="USD" value="2">USD</option>
+        </select>
+      </td>
+      <td>
+        <select name="ChangeMoney" id="Value2">
+          <option name="VND" value="1">VND</option>
+          <option name="USD" value="2">USD</option>
+        </select>
+      </td>
+      <td>
+        <button onclick="ShowResult()" type="submit"> Convert</button>
+      </td>
+    </tr>
+  </table>
+<p id="Result"></p>
+</body>
+<script src="abc.js"></script>
+</html>
