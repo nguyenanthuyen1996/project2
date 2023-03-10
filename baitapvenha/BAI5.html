@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI5</title>
+</head>
+<body>
+
+</body>
+<script>
+  let a=+prompt('Enter a:')
+  let b=+prompt('Enter b')
+  let c=+prompt('Enter c')
+  delta=(b*b)-4*a*c;
+  if(a==0){
+    if(b==0){
+      if(c==0){
+        document.write('pt vo so nghiem');
+      }else {
+        document.write('pt vo nghiem');
+      }
+    }else {
+      x=-c/b;
+      document.write('pt co 1 nghiem '+x);
+    }
+  }else if(delta>0){
+    x1=(-b+ Math.sqrt(delta))/(2*a)
+    x2=(-b- Math.sqrt(delta))/(2*a)
+    document.write('pt co 2 nghiem '+ x1 + " va " + x2);
+  }else if(delta==0){
+    x3=x4=-b/(2*a)
+    document.write('pt co 1 nghiem:'+x3);
+  }else {
+    document.write('pt vo nghiem')
+  }
+</script>
+</html>

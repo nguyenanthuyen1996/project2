@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI2</title>
+</head>
+<body>
+<script>
+    let n=+prompt('Enter so dien')
+    price1=1678; price2=1734; price3=2014 ; price4= 2536; price5= 2834; price6=2927;
+    sum=1;
+    if(n<=50){
+        sum=n*price1;
+        document.write('Tong so tien dien la:'+sum);
+    }else if(n<=100){
+        sum=(50*price1)+(n-50)*price2;
+        document.write('Tong so tien dien la:'+sum);
+    }else if(n<=200){
+        sum=(50*price1)+(50*price2)+(n-100)*price3;
+        document.write('Tong so tien dien la:'+sum);
+    }else if(n<=300){
+        sum=(50*price1)+(50*price2)+(100*price3)+(n-200)*price4;
+        document.write('Tong so tien dien la:'+sum);
+    }else if(n<=400){
+        sum=(50*price1)+(50*price2)+(100*price3)+(100*price4)+(n-300)*price5
+        document.write('Tong so tien dien la:'+sum);
+    }else{
+        sum=(50*price1)+(50*price2)+(100*price3)+(100*price4)+(100*price5)+(n-400)*price6
+        document.write('Tong so tien dien la:'+sum);
+    }
+</script>
+</body>
+</html>
