@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thuchanh3</title>
+</head>
+<body>
+
+</body>
+<script>
+  let useName = prompt('Who is there?','');
+  console.log(useName)
+  if(useName == 'Admin'){
+    let password = prompt('Password:','');
+    if(password == 'TheMaster'){
+      alert('Welcome!');
+    }else if(password==null){
+      alert('Canceled');
+    }else {
+      alert('WrongPassWord');
+    }
+  }else if(useName==null){
+    alert('Canceled');
+  }else {
+    alert('I dont know you');
+  }
+</script>
+</html>
