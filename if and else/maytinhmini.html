@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>May Tinh Mini</title>
+</head>
+<body>
+<h1> Calculate</h1>
+<input id="screen" type="text">
+<table>
+  <tr>
+    <td> <button onclick="display('1')" id="1">1</button></td>
+    <td> <button onclick="display('2')" id="2">2</button></td>
+    <td> <button onclick="display('3')" id="3">3</button></td>
+    <td> <button onclick="display('+')" id="+">+</button></td>
+  </tr>
+  <tr>
+    <td> <button onclick="display('4')" id="4">4</button></td>
+    <td> <button onclick="display('5')" id="5">5</button></td>
+    <td> <button onclick="display('6')" id="6">6</button></td>
+    <td> <button onclick="display('-')" id="-">-</button></td>
+  </tr>
+  <tr>
+    <td> <button onclick="display('7')" id="7">7</button></td>
+    <td> <button onclick="display('8')" id="8">8</button></td>
+    <td> <button onclick="display('9')" id="9">9</button></td>
+    <td> <button onclick="display('*')" id="*">*</button></td>
+  </tr>
+  <tr>
+    <td> <button onclick=" clearScreen()" id="ac">AC</button></td>
+    <td> <button onclick="display('0')" id="0">0</button></td>
+    <td> <button onclick="calculate()" id="=">=</button></td>
+    <td> <button onclick="display('/')" id="/">/</button></td>
+  </tr>
+</table>
+</body>
+<script>
+  function clearScreen(){
+    document.getElementById('screen').value="";// clear bang chuoi rong
+  }
+  function display(value){
+    document.getElementById('screen').value+= value; // lay ket qua va hien thi gia tri nut dc nhan vao
+  }
+  function calculate(){
+    let a= document.getElementById('screen').value;//lay gia tri
+    let b= eval(a);                   // eval() la ham tra ve bieu thuc tinh toan
+    document.getElementById('screen').value=b;
+  }
+</script>
+</html>
