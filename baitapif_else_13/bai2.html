@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>baitap2</title>
+</head>
+<body>
+<script>
+  // Bai 1:Chuyển từ độ C sang độ F.
+  /*let c= prompt('nhap do c:');
+  c=parseInt(c);
+  let f=(9*c)/5+32;
+  document.write('gia tri do f:'+f);*/
+
+  //Bai 2:Chuyển từ mét sang feet:
+ /* let a=+prompt('enter a')
+  ft= a*3.2808
+  alert('gia tri chuyen doi la:'+ft)*/
+
+  //Bai3:  Tính diện tích hình vuông khi biết cạnh a.
+/*
+  let a=+prompt('nhap canh vuong a')
+  dt=Math.pow(a,2)
+  alert('dien tich hinh vuong la S'+dt)*/
+
+  //Bai 4: Tính diện tích hình  chữ nhật khi biết 02 cạnh a, b.
+/*  let a=+prompt('Nhap canh dai a')
+  let b=+prompt('Nhap canh rong b:')
+  dt=a*b
+  alert('dien tich S la:' +dt)*/
+
+
+  //Bai 5:Tính diện tích tam giác vuông khi biết 02 cạnh kề a, b.
+ /* let a=+prompt('Nhap canh a')
+  let b=+prompt('Nhap canh b')
+  dt=(a*b)/2
+  alert('S tam giac vuong la:'+dt)*/
+
+
+  // Bai 6: Giải phương trình bậc 1.
+  /*let a=+prompt('Nhap gia tri a:')
+  let b=+prompt('Nhap gia tri b:')
+  if(a===0){
+    if(b===0){
+      alert('pt vo so nghiem')
+    }else {
+      alert('pt vo nghiem')
+    }
+  }else {
+    x=-b/a
+    alert('pt co 1 nghiem:'+x)
+  }*/
+
+
+  //Bai 7:Giải phương trình bậc 2.
+
+  /*let a=+prompt('Enter a:')
+  let b=+prompt('Enter b')
+  let c=+prompt('Enter c')
+  delta=(b*b)-4*a*c;
+  if(a==0){
+    if(b==0){
+      if(c==0){
+        document.write('pt vo so nghiem');
+      }else {
+        document.write('pt vo nghiem');
+      }
+    }else {
+      x=-c/b;
+      document.write('pt co 1 nghiem '+x);
+    }
+  }else if(delta>0){
+    x1=(-b+ Math.sqrt(delta))/(2*a)
+    x2=(-b- Math.sqrt(delta))/(2*a)
+    document.write('pt co 2 nghiem '+ x1 + " va " + x2);
+  }else if(delta==0){
+    x3=x4=-b/(2*a)
+    document.write('pt co 1 nghiem:'+x3);
+  }else {
+    document.write('pt vo nghiem')
+  }*/
+
+
+
+  //Bai 8:Kiểm tra xem một số nhập vào có phải là tuổi của một người không. Một số nguyên là tuổi của một người khi nhỏ 120 và lơn hơn 0.
+/*  let age=+prompt('Nhap number')
+  if(age>0 && age<120){
+    alert('day la tuoi cua 1 nguoi')
+  }else {
+    alert('day khong phai tuoi cua 1 nguoi')
+  }*/
+
+  //Bai 9:Kiểm tra xem 3 số thực (a,b,c) nhập vào có phải là cạnh của một tam giác. Điều kiện để a,b,c là cạnh của một tam giác là:
+  /*let a=+prompt('nhap a:')
+  let b=+prompt('nhap b:')
+  let c=+prompt('nhap c:')
+  if(Math.abs(b-c)<a && a<(b+c)){
+    alert('day la tam giac')
+  }else {
+    alert('day k phai la tam giac')
+  }*/
+
+
+  //Bai 10:Viết chương trình tính giá điện.
+  /*let n=+prompt('Enter so dien')
+  price1=1678; price2=1734; price3=2014 ; price4= 2536; price5= 2834; price6=2927;
+  sum=1;
+  if(n<=50){
+    sum=n*price1;
+    document.write('Tong so tien dien la:'+sum);
+  }else if(n<=100){
+    sum=(50*price1)+(n-50)*price2;
+    document.write('Tong so tien dien la:'+sum);
+  }else if(n<=200){
+    sum=(50*price1)+(50*price2)+(n-100)*price3;
+    document.write('Tong so tien dien la:'+sum);
+  }else if(n<=300){
+    sum=(50*price1)+(50*price2)+(100*price3)+(n-200)*price4;
+    document.write('Tong so tien dien la:'+sum);
+  }else if(n<=400){
+    sum=(50*price1)+(50*price2)+(100*price3)+(100*price4)+(n-300)*price5
+    document.write('Tong so tien dien la:'+sum);
+  }else{
+    sum=(50*price1)+(50*price2)+(100*price3)+(100*price4)+(100*price5)+(n-400)*price6
+    document.write('Tong so tien dien la:'+sum);
+  }*/
+// Bai 11: Viết chương trình tính thuế thu nhập cá nhân.
+  let a=+prompt('Tong tien thu nhap 1 nam:')
+  if(a<=60 && a>0){
+    tncn=a*0.05
+    alert('Thu nhap ca nhan la:'+tncn)
+  }else if(a<=120){
+    tncn=a*0.1
+    alert('Thu nhap ca nhan la:'+tncn)
+  }else  if(a<=384){
+    tncn=a*0.15
+    alert('Thu nhap ca nhan la:'+tncn)
+  }else if(a<=624){
+    tncn=a*0.2
+    alert('Thu nhap ca nhan la:'+tncn)
+  }else if(a<=960){
+    tncn=a*0.25
+    alert('Thu nhap ca nhan la:'+tncn)
+  }else {
+    tncn=a*0.3
+    alert('Thu nhap ca nhan la:'+tncn)
+  }
+
+
+  //Bai 12:Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.
+
+
+</script>
+</body>
+</html>
