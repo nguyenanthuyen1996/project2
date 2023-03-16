@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THUC HANH 3</title>
+</head>
+<body>
+</body>
+<script>
+    let number = +prompt('Nhap number can check:')
+    let arr = [1,2,3,4]
+    let flag = false
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] === number){
+            flag = true
+        }
+    }
+    if(flag){
+        document.write(number + ' Nam trong mang');
+    }
+    else {
+        document.write(number + ' Khong nam trong mang')
+    }
+</script>
+</html>

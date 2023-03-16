@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thuc Hanh 1</title>
+</head>
+<body>
+<input id="input" type="text">
+<button id="add" onclick="add()">Add</button>
+<button id="display" onclick="display1()"> Display</button>
+<p id="result" ></p>
+</body>
+<script>
+  let x =0;
+  let array= Array()
+  function add(){
+    array[x]=document.getElementById('input').value // ham gan gia tri vao array
+    alert("Element:"+array[x]+"Add index" +x)    // in ra so nhap vao va vi tri
+    x++                                           // tang len 1
+    document.getElementById('input').value=""   // in ra gia tri
+  }
+  function display1(){
+    let e="<br>"
+    for(let i=0; i<array.length;i++){
+      e += "Element " + i + " = " + array[i] + "<br/>";
+    }
+    document.getElementById('result').innerHTML=e
+  }
+</script>
+</html>
