@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 1</title>
+</head>
+<body>
+</body>
+<script>
+  // Bai 1: Noi chuoi
+  /*let myColor = ["Red","Green","White","Black"]
+  document.write(myColor.toString() +"<br>")
+  document.write(myColor.join() +"<br>")
+  document.write(myColor.join('+'))*/
+
+  //Bai 2:Viết một chương trình nhận một số nhập vào và chèn dấu (-) giữa 2  số chẵn. Ví dụ nếu bạn nhập vào 025468 thì kết quả của chương trình sẽ là 0-254-6-8.
+
+  /*let n=+prompt('Nhap n:')
+  let arr = n.toString()
+  let result =[arr[0]]
+  for (let i = 1; i <arr.length ; i++) {
+    if(arr[i-1]%2===0 && arr[i]%2===0){
+      result.push("-",arr[i])
+    }else {
+      result.push(arr[i])
+    }
+  }
+  document.write(result.join(''))*/
+
+  //bai 3:doi chu thuong sang chu hoa
+  let text=prompt("nhap text can chuyen")
+  let result=[]
+  let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  let LOWER = 'abcdefghijklmnopqrstuvwxyz'
+  for (let i = 0; i <text.length ; i++) {
+    if(UPPER.indexOf(text[i]) !== -1)
+    {
+      result.push(text[i].toLowerCase())
+    }
+    else if(LOWER.indexOf(text[i]) !== -1)
+    {
+      result.push(text[i].toUpperCase())
+    }
+    else
+    {
+      result.push(text[i])
+    }
+  }
+  document.write(result.join(''))
+
+</script>
+</html>

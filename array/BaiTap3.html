@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 3</title>
+</head>
+<body>
+</body>
+<script>
+  //Bai1:  Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử. Chương trình thực hiện tính và hiển thị xem có bao nhiêu số nguyên lớn hơn hoặc bằng 10.
+
+  /*let number = +prompt('Nhap number phan tu mang:')
+  let arr =[]
+  for (let i = 0; i < number; i++) {
+       let input = prompt("Nhap gia tri "+i+ " trong mang:")
+         arr.push(input)
+    // arr.push(prompt("Nhap gia tri "+i+ " trong mang:"))
+  }
+  document.write(arr)*/
+  /*let arr =[11,12,14,13,1]
+  let result=0
+  let count =0
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i] >= 10){
+      result = arr[i]
+      document.write('Gia tri lon hon 10 la :'+ result +"<br>")
+      count++
+    }
+  }
+  document.write('tong so lon hon 10 la: ' +count)
+
+ let newArr=arr.filter(function (item){
+     return item >= 10
+   })
+  document.write('gia tri lon hon 10 la:'+newArr)*/
+
+
+  //Bai 2:Viết chương trình khởi tạo mảng số nguyên gồm 10 phần tử khác nhau. Chương trình hiển thị ra được phần tử có giá trị lớn nhất trong mảng và vị trí của phần tử đó.
+   /*let number = +prompt('Nhap number phan tu')
+   let arr=[]
+  for (let i = 0; i < number.length; i++) {
+    let input = prompt('nhap gia tri '+i+' trong mang:')
+    arr.push(input)
+  }*/
+  /*let arr = [1,2,3,4,5]
+  let max=arr[0]
+  let vitri=0
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]>max){
+      max=arr[i]
+      vitri=i
+    }
+  }
+  document.write('gia tri max la:'+max +"<br>")
+  document.write('vi tri cua max la:'+vitri)*/
+
+  //Bai 3:Viết chương trình khởi tạo mảng số nguyên. Hiển hiện giá trị lớn nhất trong mảng đó. In ra giá trị trung bình của các phần tử trong mảng.
+  /*let arr = [1,2,3,4,5]
+  let max=arr[0]
+  let sum=1
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]>max){
+      max=arr[i]
+      sum=sum+arr[i]
+    }
+  }
+  document.write('gia tri max la:'+max +"<br>")
+  document.write('tong la:'+sum)*/
+
+  // bai 4: Viết chương trình khởi tạo/nhập vào một mảng số nguyên và đảo ngược các phần tử trong mảng đó.
+
+ /* let number = +prompt('Nhap number phan tu mang:')
+  let arr =[]
+  for (let i = 0; i < number; i++) {
+    let input = prompt("Nhap gia tri "+i+ " trong mang:")
+    arr.push(input)
+    // arr.push(prompt("Nhap gia tri "+i+ " trong mang:"))
+  }
+  document.write(arr+"<br>")
+  document.write(arr.reverse())*/
+
+
+  //Bai 5:Viết chương trình đếm số nguyên âm trong một chuỗi
+
+  /*let number = +prompt('Nhap number la phan tu mang')
+  let arr =[]
+  for (let i = 0; i < number; i++) {
+    arr.push(prompt('Nhap gia tri '+i+' cu mang:'))
+  }
+  let count = 0
+  for (let i = 0; i < arr.length; i++) {
+    if(arr[i]<0){
+      count++
+    }
+  }
+  document.write('Tong so nguyen am la:'+count)*/
+
+
+  //Bai 6:Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình tìm xem V có nằm trong mảng số nguyên không? Nếu V thuộc mảng số nguyên thì in ra "V is in the array" còn lại in ra "V is not in the array".
+ /* let number1 =+prompt('Nhap number1:')
+  let arr1=[]
+  for (let i = 0; i < number1; i++) {
+    arr1.push(prompt('Nhap gia tri phan tu '+i+' la:'))
+  }
+  let V=+prompt('Nhap V')
+  let flag=true
+  for (let i = 0; i < arr1.length; i++) {
+    if(V===arr1[i]){
+      flag=true
+    }
+  }
+  if(flag){
+    document.write('V in array')
+  }else {
+    document.write('V not in array')
+  }
+*/
+
+  //Bai 7:Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+  let number =+prompt('Nhap number1:')
+  let arr=[]
+  for (let i = 0; i < number; i++) {
+    arr.push(prompt('Nhap gia tri phan tu '+i+' la:'))
+  }
+  let V=+prompt('Nhap V')
+  //let flag=true
+  let newarr=[]
+  let vitri=0
+  for (let i = 0; i < arr.length; i++) {
+    if(V===arr[i]){
+        vitri=i
+        document.write(arr.splice(vitri,1))
+    }
+  }
+
+
+  //bai 8:Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
+
+  /*let number =+prompt('Nhap number1:')
+  let arr=[]
+  for (let i = 0; i < number; i++) {
+      arr.push(prompt('Nhap gia tri phan tu '+i+' la:'))
+  }
+  function compareNumbers(arr, b) {
+      return b - arr;
+  }
+  arr.sort((arr,b) => b-arr)
+  document.write(arr)*/
+
+
+
+  // Bai 9:Noi Mang
+
+  /*let number=+prompt('Nhap number :')
+  let a = []
+  for (let i = 0; i < number; i++) {
+      a.push(prompt('nhap gia tri'))
+  }
+  let number2=+prompt('Nhap number2 :')
+  let b = []
+  for (let i = 0; i < number2; i++) {
+      b.push(prompt('nhap gia tri'))
+  }
+   let c=[1,2,3,4,5,]
+  let newArr = c.concat(a,b)
+  document.write(newArr)*/
+
+
+  //indexof: tra ve index neu no co trong mang. k thi tra ve -1.
+
+  /*let arr=[1,2,3,4,5]
+let input =+prompt('Nhap so can kt:')
+  let indexOfInput=arr.indexOf(input)
+  if(indexOfInput !== -1){
+      alert(`${input} co nag trong mang o vi tri: ${indexOfInput}`)
+  }else {
+      alert(`${input} k nam trong mang`)
+  }*/
+</script>
+</html>
