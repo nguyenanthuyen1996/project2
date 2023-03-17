@@ -117,21 +117,23 @@
 */
 
   //Bai 7:Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V. Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng (Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
-  let number =+prompt('Nhap number1:')
+  /*let number =+prompt('Nhap number1:')
   let arr=[]
   for (let i = 0; i < number; i++) {
     arr.push(prompt('Nhap gia tri phan tu '+i+' la:'))
-  }
-  let V=+prompt('Nhap V')
+  }*/
+  let arr =[1,2,3,4]
+  let input =+prompt('Nhap input')
   //let flag=true
   let newarr=[]
   let vitri=0
   for (let i = 0; i < arr.length; i++) {
-    if(V===arr[i]){
+    if(input ===arr[i]){
         vitri=i
-        document.write(arr.splice(vitri,1))
+        arr.splice(i,1)
     }
   }
+  document.write(arr)
 
 
   //bai 8:Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử. Chương trình sắp xếp mảng theo thứ tự giảm dần và hiển thị ra mảng đã được sắp xếp.
