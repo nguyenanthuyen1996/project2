@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 5</title>
+</head>
+<style>
+  button{
+    background-color: green;
+    color: white;
+  }
+</style>
+<body>
+<h3> Add New Product</h3>
+<input id="inputValue" type="text" placeholder="New Product">
+<button onclick="addValue()">Add</button>
+<h3>Display All Product</h3>
+<p id="result"></p>
+</body>
+<script>
+  let x =0;
+  let array= Array()
+  function addValue() {
+    array[x] = document.getElementById('inputValue').value
+    alert("Element:" + array[x] + "Add index" + x)
+    x++
+    document.getElementById('inputValue').value = ""
+    let e = ""
+    for (let i = 0; i < array.length; i++) {
+      e += array[i] + "<button onclick='editValue()'>edit</button>" + "<button onclick='deleteValue()'>delete</button>" + "<br>";
+    }
+    document.getElementById('result').innerHTML = e
+
+  }
+  function editValue() {
+    let newValue = prompt('Nhap gia tri moi')
+
+  }
+
+
+</script>
+</html>

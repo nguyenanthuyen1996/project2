@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 6</title>
+</head>
+<body>
+<input type="button" onclick="main()" value="Test">
+</body>
+<script>
+  let chuoi = "Aa11aA";
+
+  function isPalindrome(str) {
+
+    let arr = str.split("");
+
+    let firstCharacter = arr[0];
+    let lastCharactor = arr[arr.length-1];
+
+    if (firstCharacter === lastCharactor) {
+      arr.shift();
+      arr.pop();
+      if (isEnd(arr)) {
+        return true;
+      } else {
+        let newStr = arr.join("");
+        return isPalindrome(newStr);
+      }
+    }
+
+    return false;
+
+  }
+
+  function isEnd(arr) {
+    return arr.length === 0 || arr.length === 1;
+  }
+
+
+  function main() {
+    document.write(isPalindrome(chuoi));
+  }
+</script>
+</html>
