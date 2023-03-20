@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Text Arena</title>
+</head>
+<style>
+  body{
+    width: 180px;
+    margin: auto;
+  }
+</style>
+<body>
+<p style="text-align: center"><b>Type anything slowly</b></p>
+<textarea  id="text" oninput="checkOne()"></textarea>
+</body>
+<script>
+  let str="Ngu vay sao choi"
+  let count =0
+  let a=""
+  function checkOne(){
+     a = a + str[count]
+    count++
+    document.getElementById('text').value =a
+    if(count===str.length){
+      a=""
+      count=0
+    }
+  }
+</script>
+</html>
