@@ -38,7 +38,7 @@
 
   // Bai 4:
 
- /* function checkInput(number){
+  /*function checkInput(number){
       if(number >= '0' && number<= '9'){
           return 'true'
       }else {
@@ -49,6 +49,65 @@
   document.write(checkInput(number))*/
 
   //bai 5:
+    /*  function findMin(a,b,c){
+         let min
+          min = a
+          if(b<min && b<c){
+              return b
+          }else if(c<min){
+              return c
+          }else {
+              return min
+          }
+      }
+  let a = +prompt('nhap so a:')
+  let b = +prompt('Nhap so b:')
+  let c = +prompt('Nhap so c:')
+  document.write('so be nhat la'+findMin(a,b,c))*/
+
+  // Bai 6:
+
+  /*function checkNumber(n){
+      if(n>0){
+          return 'true'
+      }else {
+          return 'false'
+      }
+  }
+  let n = +prompt('nhap n')
+  document.write(checkNumber(n))*/
+
+  //Bai 7:
+ /* function swap(a,b){
+      let arr =[a,b]
+      return arr.reverse()
+  }
+  alert(swap(5,6))*/
+
+  // bai 8:
+  /*function swapArr(arr){
+      return arr.reverse()
+  }
+  let arr =[1,2,3,4,5,6,7]
+  document.write(swapArr(arr))*/
+
+  // bai 9:
+  /*function findX(arr,x){
+      let count = 0
+      let result =false
+      for (let i = 0; i < arr.length; i++) {
+          if(arr[i]===x){
+              count++
+              result=true
+          }
+      }
+      if(result){
+          document.write(`${count}`)
+      }else {
+          document.write("-1")
+      }
+  }
+  findX([1,2,3,1,5,6],0)*/
 
 </script>
 </html>
