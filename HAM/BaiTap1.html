@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BAI TAP 1(SO NGUYEN TO)</title>
+</head>
+<body>
+</body>
+<script>
+  function isPrime(number) {
+      if (number < 2)
+          return false
+      else {
+          for (let i = 2; i < (number - 1); i++) {
+              if (number % i === 0) {
+                  return false
+              }
+          }
+          return true
+      }
+  }
+  let n =+prompt('Nhap number can kiem tra:')
+  if(isPrime(n) === true){
+      document.write(`${n} la SNT`)
+  }
+  else {
+      document.write(`${n} khong phai SNT`)
+  }
+
+</script>
+</html>
