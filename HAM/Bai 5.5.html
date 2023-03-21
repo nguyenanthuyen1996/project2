@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap 5</title>
+</head>
+<style>
+  button{
+    background-color: green;
+    color: white;
+  }
+</style>
+<body>
+<h3> Add New Product</h3>
+<input id="inputValue" type="text" placeholder="New Product">
+<button onclick="addValue()">Add</button>
+<h3>Display All Product</h3>
+<p id="result"></p>
+</body>
+<script>
+  let arr =new Array()
+  function addValue() {
+     let input = document.getElementById('inputValue').value
+    arr.push(input)
+    // alert("Element:" + array[x] + "Add index" + x)
+    document.getElementById('inputValue').value = ""
+    showInput()
+  }
+  function showInput(){
+    let ex=""
+    for (let i = 0; i < arr.length; i++) {
+      ex += arr[i] + `<button onclick='editValue(${i})'>edit</button>` + `<button onclick='deleteValue(${i})'>delete</button>` + "<br>";
+    }
+    document.getElementById('result').innerHTML = ex
+  }
+  function editValue(index){
+    let newValue= prompt('Nhap gia tri moi')
+    arr[index]=newValue
+    showInput(index)
+  }
+  function deleteValue(index1){
+    let result1=confirm('Want to delete?')
+    arr.splice(index1,1)
+    if (result1){
+      showInput(index1)
+    }
+  }
+</script>
+</html>

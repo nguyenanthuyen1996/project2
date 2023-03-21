@@ -19,7 +19,7 @@
 </body>
 <script>
   let x =0;
-  let array= Array()
+  let array= new Array()
   function addValue() {
     array[x] = document.getElementById('inputValue').value
     alert("Element:" + array[x] + "Add index" + x)
@@ -27,13 +27,24 @@
     document.getElementById('inputValue').value = ""
     let e = ""
     for (let i = 0; i < array.length; i++) {
-      e += array[i] + "<button onclick='editValue()'>edit</button>" + "<button onclick='deleteValue()'>delete</button>" + "<br>";
+      e += array[i] + `<button onclick='editValue(${i})'>edit</button>` + `<button onclick='deleteValue(${i})'>delete</button>` + "<br>";
     }
     document.getElementById('result').innerHTML = e
 
   }
-  function editValue() {
-    let newValue = prompt('Nhap gia tri moi')
+  function deleteValue(index) {
+    // let newValue = prompt('Nhap gia tri moi')
+    // array[index]= newValue
+    array.splice(index, 1);
+    console.log()
+      let ex=""
+      for (let i = 0; i < array.length; i++) {
+          ex += array[i] + `<button onclick='editValue(${i})'>edit</button>` + `<button onclick='deleteValue(${i})'>delete</button>` + "<br>";
+      }
+      document.getElementById('result').innerHTML = ex
+
+  }
+  function deleteValue(index1){
 
   }
 
