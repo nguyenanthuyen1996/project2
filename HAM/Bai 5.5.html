@@ -28,6 +28,9 @@
     table{
         border-collapse: collapse ;
     }
+    span{
+        color: red;
+    }
 </style>
 <body>
 <h3> Add New Product</h3>
@@ -35,7 +38,7 @@
 <input id="inputValue" type="text" placeholder="New Product">
 <button onclick="addValue()">Add</button>
 </div>
-<h3>Display All Product<span id="count"></span></h3>
+<h3>Display All Product &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<span id="count">0 Product</span></h3>
 <p id="result"></p>
 </body>
 <script>
@@ -46,7 +49,7 @@
         arr.push(input)
         document.getElementById('inputValue').value=""
         showInput()
-        document.getElementById("count").innerHTML=arr.length +'Product'
+        document.getElementById("count").innerHTML=arr.length +' Product'
     }
     function showInput() {
         let ex = ""
@@ -70,9 +73,11 @@
         let result1 = confirm('Want to delete?')
         arr.splice(index1, 1)
         if (result1) {
-            showInput(index1)
+            showInput()
         }
+        document.getElementById("count").innerHTML=arr.length +' Product'
     }
+
 
 </script>
 </html>
