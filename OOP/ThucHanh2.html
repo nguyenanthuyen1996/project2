@@ -7,6 +7,22 @@
 <body>
 </body>
 <script>
-  
+  class Circle{
+      radius
+      constructor(radius) {
+          this.radius = radius
+      }
+      getRadius(){
+          return this.radius
+      }
+      getArea(radius){
+          return Math.PI*radius *radius
+      }
+  }
+   let newCircle = new Circle(2)
+   let radius = newCircle.getRadius()
+   let area= newCircle.getArea(2)
+   console.log(radius+'radius and area:'+area)
+
 </script>
 </html>

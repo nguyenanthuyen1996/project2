@@ -36,13 +36,14 @@ class Date{
 }
 
 let newDate = new Date(11, 1, 2023)
+console.log(newDate)
 /*newDate.setDay(10);
 newDate.setMonth(2);
 newDate.setYear(2022);*/
-/*newDate.setDate(10,12,2022)*/
+newDate.setDate(10,12,2022)
 
 let day = newDate.getDay()
 let month = newDate.getMonth()
 let year = newDate.getYear()
-console.log(newDate.toString(day,month,year))
+//console.log(newDate.toString(day,month,year))
 
