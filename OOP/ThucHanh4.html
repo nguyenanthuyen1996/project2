@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+</body>
+<script>
+  class Temperature{
+
+    C
+    constructor(C) {
+      this.C = C
+    }
+    getCinF(C){
+      return C*(9/5)+32
+    }
+    getCinKenvin(C){
+      return C+273.15
+    }
+  }
+  let temperature = new Temperature(25)
+  document.write('chuyen sang do f:' +temperature.getCinF(25)+'<br>')
+  document.write('chuyen sang do k: ' + temperature.getCinKenvin(25))
+</script>
+</html>
