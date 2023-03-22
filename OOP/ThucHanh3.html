@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FUNNY CIRCLES</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="100" style="border:1px solid black"></canvas>
+</body>
+<script>
+  // Bai 1: ve hinh tron tren canvas
+/*  function Circle(x,y,radius){
+    this.x = x
+    this.y = y
+    this.radius = radius
+  }
+  function creatCircle(){
+    let  a = document.getElementById('myCanvas').getContext("2d")
+    let circle =new Circle(90,50,40)
+    a.beginPath();
+    a.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    a.fill();
+  }
+  creatCircle()*/
+
+  //bai 2; ve hinh tron voi ban kinh ngau nhien
+   /* function  Circle(x,y,radius){
+      this.x = x
+      this.y = y
+      this.radius = radius
+    }
+    function creatCircle(){
+      let a = document.getElementById('myCanvas').getContext('2d')
+      let radius = Math.floor(Math.random() * 80)  // math.floor: ham lam tron so
+      let circle =new Circle(90,40,radius)
+      a.beginPath()
+      a.arc(circle.x , circle.y ,circle.radius ,0,2* Math.PI)
+      a.fill()
+    }
+    creatCircle()*/
+
+  //bai 3: ve hinh tron voi mau ngau nhien
+ /* function Circle(x,y,radius){
+    this.x = x
+    this.y = y
+    this.radius = radius
+  }
+  function getRandomHex(){
+    return Math.floor(Math.random()*255);   // random tu khoang 0 den 244
+  }
+
+  function getRandomColor(){
+    let red = getRandomHex();
+    let green = getRandomHex();
+    let blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green +")" // rgb: tong hop 3 loai mau
+  }
+  function createCircle(){
+    let ctx = document.getElementById("myCanvas").getContext("2d")
+    let radius = Math.floor(Math.random() * 80)
+    let color = getRandomColor()
+    let circle= new Circle(90, 40, radius)
+    ctx.beginPath()
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI)
+    ctx.fillStyle = color
+    ctx.fill()
+  }
+  createCircle()*/
+
+  // bai 4:Vẽ được hình tròn với vị trí ngẫu nhiên
+  /*function Circle(x,y,radius){
+    this.x = x
+    this.y = y
+    this.radius = radius
+  }
+  function getRandomHex(){
+    return Math.floor(Math.random()*255)
+  }
+  function getRandomColor(){
+    let red = getRandomHex();
+    let green = getRandomHex();
+    let blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green +")" // rgb: tong hop 3 loai mau
+  }
+  function creatCircle(){
+    let a = document.getElementById('myCanvas').getContext('2d')
+    let color = getRandomColor()
+    let x = Math.random()*window.innerWidth
+    let y = Math.random()*window.innerHeight
+    let circle = new Circle(x,y,20)
+    a.beginPath()
+    a.arc(circle.x , circle.y ,circle.radius , 0 ,2*Math.PI)
+    a.fillStyle = color
+    a.fill()
+  }
+  creatCircle()*/
+
+  //Bai 5:Tạo rất nhiều hình tròn.
+  function Circle(x, y, radius){
+    this.x = x;
+    this.y = y;
+    this.radius = radius;
+  }
+
+  function getRandomHex(){
+    return Math.floor(Math.random()*255);
+  }
+
+  function getRandomColor(){
+    let red = getRandomHex();
+    let green = getRandomHex();
+    let blue = getRandomHex();
+    return "rgb(" + red + "," + blue + "," + green +")";
+  }
+
+  function createCircle(){
+    let ctx = document.getElementById("myCanvas").getContext("2d");
+    let radius = Math.floor(Math.random() * 80);
+    let color = getRandomColor();
+    let x = Math.random() * window.innerWidth;
+    let y = Math.random() * window.innerHeight;
+    let circle= new Circle(x, y, radius);
+    ctx.beginPath();
+    ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+    ctx.fillStyle = color;
+    ctx.fill();
+  }
+
+  function createMultipleCircle(){
+    for(let i = 0; i < 30; i++){
+      createCircle();
+    }
+  }
+
+  createMultipleCircle();
+
+</script>
+</html>
