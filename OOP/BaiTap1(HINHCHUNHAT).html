@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HINHCHUNHAT</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1000" height="700" style="border: 1px solid black" ></canvas>
+</body>
+<script>
+  class Rectangle{
+      x
+      y
+      width
+      height
+
+      constructor(x,y,width,height) {
+          this.x = x
+          this.y = y
+          this.width = width
+          this.height = height
+      }
+      getDienTich(width,height){
+          return width * height
+      }
+      getChuVi(width,height){
+          return (width+height)*2
+      }
+      randomColor(){
+          let red = Math.random()*255
+          let green = Math.random() *255
+          let blue = Math.random() *255
+          return (`rgb(${red} ,${green}, ${blue})`)
+      }
+      drawRectangle(){
+          let ctx = document.getElementById('myCanvas').getContext('2d')
+          ctx.beginPath()
+          ctx.rect(this.x,this.y,this.width,this.height)
+          ctx.fillStyle = this.randomColor()
+          ctx.fill()
+          ctx.closePath()
+      }
+  }
+  let draw = new Rectangle(100,100,100,40)
+  draw.drawRectangle()
+  document.write('dien tich la : ' +draw.getDienTich(100,40))
+</script>
+</html>
