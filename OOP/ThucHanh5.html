@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>THUC HANH 5</title>
+</head>
+<body>
+</body>
+<script>
+  class Battery{
+      energy
+      constructor(energy) {
+          this.energy = energy
+      }
+      getEnergy(){
+          return this.energy
+      }
+      setEnergy(energy){
+          return this.energy = energy
+      }
+      getDecreaseEnergy(){
+          if(this.energy>0){
+              this.energy --
+          }
+          return this.energy
+      }
+  }
+  class FlashLamp{
+      battery
+      status
+      constructor(battery) {
+          this.battery = battery
+      }
+      getBatteryInfo(){
+          return this.battery.getEnergy()
+      }
+      setBattery(battery){
+          return this.battery = battery
+      }
+      light(status){
+          if (this.status){
+              alert('Lighting')
+          }else {
+              alert('Not light')
+          }
+      }
+      turnOn(status){
+          return this.status = true
+      }
+      turnOff(status){
+          return this.status = false
+      }
+
+  }
+  let battery= new Battery()
+  battery.setEnergy(10)
+
+  let flashLamp = new FlashLamp()
+  flashLamp.setBattery(battery)
+  document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>")
+  flashLamp.light()
+
+  document.write("Turn on<br/>")
+  flashLamp.turnOn()
+  flashLamp.light()
+  document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>")
+
+</script>
+</html>
