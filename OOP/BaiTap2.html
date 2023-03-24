@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap 2</title>
+</head>
+<body>
+<p id="result" ></p>
+</body>
+<script>
+    class ElectricLamp{
+        status
+        constructor(status) {
+            this.status = status
+        }
+        getStatus(){
+            return this.status
+        }
+    }
+    class SwitchButton{
+        status
+        lamp
+        constructor(status,lamp) {
+            this.status = status
+            this.lamp = lamp
+        }
+        getLamp(){
+            return this.lamp
+        }
+        setLamp(lamp){
+            return this.lamp = lamp
+        }
+        connectToLamp(Electriclamp){
+            return this.lamp = Electriclamp
+        }
+        switchOn(){
+            this.lamp.status = true
+            return this.status = true
+        }
+        switchOff(){
+            this.lamp.status = false
+            return this.status = false
+        }
+    }
+    let electricLamp = new ElectricLamp(true)
+    let  switchButton = new SwitchButton(electricLamp,true)
+
+    console.log(switchButton.switchOn())
+    console.log(electricLamp.getStatus())
+    console.log(switchButton.switchOff())
+    console.log(electricLamp.getStatus())
+</script>
+</html>
