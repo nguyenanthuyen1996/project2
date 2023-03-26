@@ -40,8 +40,8 @@
     }
     sendMessage(phone){      //set
         let date = new Date()
-        this.outbox.push(this.name +":" +this.message +"time"+ date)
-        phone.inbox.push( this.name+":" +this.message +"time"+date)
+        this.outbox.push(this.name +":" +this.message +" time la: "+ date)
+        phone.inbox.push( this.name+":" +this.message +" time la: "+date)
     }
     getInbox(){      //get
          return this.inbox

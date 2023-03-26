@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+// Bai 5: tim tong lon nhat trong 4 mang
+
+/*
+let A1 = [1,2,3,4,5]
+let A2 = [4,5,6,7,8]
+let A3 = [5,6,7,8,9]
+let A4 = [8,9,10,11,12]
+function Sum(arr){
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i]
+    }
+    return sum
+}
+document.write("Gia tri lon nhat la: " +Math.max(Sum(A1),Sum(A2),Sum(A3),Sum(A4)))
+*/
+
+
+
+// Bai 1:
+ /*let a = +prompt('Nhap so a:')
+ let b = +prompt('Nhap so b:')
+if(a>b){
+    alert('so lon nhat trong mang la :' +a)
+}else if(a<b){
+    alert('so lon nhat trong mang la :' +b)
+}else if(a===b){
+    alert('co 1 gia tri')
+}*/
+
+//Bai 2:
+
+/*
+let arr = [7,5,2,1,0,6,3]
+let sum = 8
+let k
+for (let i = 0; i < arr.length; i++) {
+    k = sum - arr[i]
+    for (let j = i + 1; j < arr.length; j++) {
+        for (let l = j + 1; l < arr.length; l++) {
+            if (arr[j] + arr[l] === k) {
+                document.write('phan tu 1:'+arr[i] +'phan tu 2:'+arr[j]+'phan tu 3:'+arr[l]+'<br>')
+            }
+        }
+
+    }
+}
+*/
+
+
+// Bai 4:
+/*let arr = [1,1,10,2,2,3,3,4,5,6,6]
+let count = 0
+let  z = arr[0]
+for (let i = 0; i < arr.length; i++) {
+    count = 0
+    for (let j = 0; j < arr.length; j++) {
+        if(arr[i]==arr[j]){
+            count++
+        }
+    }
+    if(count>1){
+        z=z
+    }else {
+        z = arr[i]
+        document.write('gia tri nho nhat la :' +z)
+        break
+    }
+}
+console.log(z)*/
+
+// bai 5:
+/*let arr = [5,2,3,7,9,4]
+let newArr = arr.sort((a,b)=>b-a)
+let k =3
+console.log(newArr)
+for (let i = 0; i < newArr.length; i++) {
+    if(newArr[i]===newArr[k-1]){
+        document.write('gia tri can tim la:'+newArr[i])
+    }
+}*/
+//bai 3:
+let arr = [1,2,3,4,9,3,5]
+let sum = 8
+let arr2 = []
+let arr3 = []
+let khoangcach = []
+for (let i = 0; i < arr.length; i++) {
+    for (let j = i+1;j  <arr.length ; j++) {
+        if(arr[i]+arr[j]===sum){
+            arr2.push(arr[i])
+            arr3.push(arr[j])
+            khoangcach.push(j-i)
+        }
+    }
+}
+let index
+let min = khoangcach[0]
+for (let i = 0; i < khoangcach.length; i++) {
+    if(khoangcach[i]<min){
+        min = khoangcach[i]
+        index = i
+    }
+}
+document.write(`${arr2[index]} va ${arr3[index]}`)
+
+</script>
+</html>

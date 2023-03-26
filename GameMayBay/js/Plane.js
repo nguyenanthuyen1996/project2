@@ -15,9 +15,9 @@ class Plane{
             }
             img.src ="image/plane.png "
     }
-    move(x){
-        this.ctx.clearRect(this.x,this.y,this.width,this.height)
-        this.x = x
-        this.draw()
+    move(x) {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        this.x = x;
+        this.draw();
     }
 }
